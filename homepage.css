@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Marvel:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Marvel:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Marvel:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'vvds_fiftiesexp_med';
+    src: url('./fonts/vvds-fifties-exp-med-webfont.woff2') format('woff2'),
+         url('./fonts/vvds-fifties-exp-med-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Marvel';
+    src: url('./fonts/MarvelRegular-Dj83.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+html{
+    width: 100%;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    
+}
+section:not(#no-padding){
+    margin: none;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3.5%;    
+    height: 650px;
+}
+section{
+
+}
+*{
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+header{
+    background-color: #141414;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+    position: sticky;
+    top: -2.26%;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+ul a{
+    text-decoration: none;
+    color:#ffffff;
+}
+.logo-marvel2{
+    height: 170px;
+    width: 190px;
+}
+.logo-text{
+    font-family: 'Marvel';
+    font-weight: 900;
+    font-size: 4.1rem;
+    color: #ffffff;
+    padding-top: 8px;
+}
+.logo-text2{
+    font-family: 'Marvel';
+    font-weight: 900;
+    font-size: 5.1rem;
+    color: #ffffff;
+    padding-top: 8px;
+}
+.logo-strong{
+    font-family: 'Marvel';
+}
+.logo-marvel{
+    height: 60px;
+    width: 190px;
+    background-color: #ff0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.vid-bg{
+    position: relative;
+    height: 635px; /* Set the height you want */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.vid-bg video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto; /* Keeps aspect ratio */
+    height: auto; /* Keeps aspect ratio */
+    z-index: -1; /* Sends video behind content */
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.vid-bg::before{
+    text-align: center;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1.1)0%, rgba(0, 0, 0, 1.2)26%, rgba(0, 0, 0, .2));
+    z-index: 0;
+}
+.p-uppercase p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    position: absolute;
+    font-size: 4rem;
+    left: 10%;
+    bottom: 53%;
+    -webkit-text-stroke:#ffffff;
+}
+.p-lowercase p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    position: absolute;
+    font-size: 2.5rem;
+    left: 10%;
+    bottom: 38%;
+}
+.btn{
+    height: 60px;
+    width: 240px;
+    background-color: #ff0000;
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #000000;
+    cursor: pointer;
+    clip-path: polygon(9% 0, 100% 0, 100% 80%, 91% 100%, 0 100%, 0% 20%);
+}
+.second-sec{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+.section-heading{
+    margin: 0 0 0 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 4.3rem;
+    font-weight: 1000;
+    padding: 15px;
+}
+.content{
+    width: 525px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.p-cont{
+    width: 100%;
+}
+.content p{
+    text-align: justify;
+    font-size: 2.46rem;
+}
+.boxes{
+    height: 550px;
+    width: 600px;
+    position: relative;
+    transition-property: all;
+    transition-duration: 500ms;
+}
+.boxes div{
+    position: absolute;
+    outline: solid #000000 5px;
+    background-size: cover;
+}
+.box1{
+    height: 290px;
+    width: 290px;
+    background-color: #ff0000;
+    bottom: 28%;
+    left: 40%;
+    z-index: 4;
+    animation: floating 8s ease-in-out infinite;
+    animation-fill-mode: both;
+    background-image: url('./resources/peter_two.jpg');
+}
+.box2{
+    height: 170px;
+    width: 170px;
+    background-color: #ff6600;
+    top: 10%;
+    left: 70%;
+    z-index: 2;
+    animation: moving-side 6s ease-in-out infinite;
+    background-image: url('./resources/boxImg.jpg');
+}
+.box3{
+    height: 120px;
+    width: 120px;
+    background-color: #ff9d00;
+    top: 5%;
+    left: 55%;
+    z-index: 1;
+    animation: moving-side-left 7s ease-in-out infinite;
+    background-image: url('./resources/venomvenom.jpg');
+}
+.box4{
+    height: 70px;
+    width: 70px;
+    background-color: #ffc800;
+    top: 5%;
+    left: 30%;
+    animation: moving-fade 20s ease-in-out infinite;
+    background-image: url('./resources/ironiron.jpg');
+}
+.box5{
+    height: 215px;
+    width: 215px;
+    background-color: #ff6600;
+    bottom: 10%;
+    left: 25%;
+    z-index: 3;
+    animation: moving-side-left 5s ease-in-out infinite;
+    background-image: url('./resources/imgbox.jpg');
+}
+.box6{
+    height: 220px;
+    width: 220px;
+    background-color: #ffff00;
+    bottom: 15%;
+    right: 28%;
+    z-index: 1;
+    animation: moving-fade 20s ease-in-out infinite;
+    background-image: url('./resources/marvelmarvel.webp');
+}
+.box7{
+    height: 120px;
+    width: 120px;
+    background-color: #ff9d00;
+    bottom: 5%;
+    left: 14%;
+    z-index: 2;
+    animation: moving-fade 20s ease-in-out infinite;
+    background-image: url('./resources/imgimg.jpg');
+}
+.third-sec{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    height: 1000px;
+}
+.third-sec h1{
+    font-size: 5rem
+}
+.third-sec h2{
+    font-size: 3rem;
+}
+.content2{
+    display: flex;
+    width: 1200px;
+    gap: 50px;
+}
+.parag-cont{
+    width: 600px;
+    text-align: justify;
+    font-size: 2.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.instruction{
+    width: 700px;
+    height: 400px;
+    background-color: #000000;
+    color:#ffffff;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container .card{
+    position: absolute;
+    width: 240px;
+    height: 320px;
+    background-color: #ff6600;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card-container .card img{
+    
+}
+.cards{
+    height: 500px;
+    background-color: #000000;
+
+}
+@keyframes moving-fade{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    20%{
+        transform: translateX(-30px);
+        opacity: .7;
+    }
+    40%{
+        transform: translateX(-40px);
+        opacity: .5;
+    }
+    80%{
+        transform: translateX(-50px);
+        opacity: 0.8;
+    }
+    100%{
+        
+    }
+}
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0) translateX(16px);
+    }
+    50% {
+        transform: translateY(30px) translateX(-16px);
+    }
+    75%{
+        transform: translateY(35px) translateX(16px);
+    }
+}
+@keyframes moving-side{
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(16px);
+    }
+}
+@keyframes moving-side-left{
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-16px);
+    }
+}
+.instruction{
+    background-image: url('./resources/peter_two.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+footer{
+    height: 300px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: space-around;
+}
+footer i{
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.icon-cont{
+    display: flex;
+    gap: 20px;
+}
