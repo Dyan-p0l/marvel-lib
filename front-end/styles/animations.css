@@ -1,0 +1,128 @@
+@keyframes moving-fade{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    20%{
+        transform: translateX(-30px);
+        opacity: .7;
+    }
+    40%{
+        transform: translateX(-40px);
+        opacity: .5;
+    }
+    80%{
+        transform: translateX(-50px);
+        opacity: 0.8;
+    }
+    100%{
+        
+    }
+}
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0) translateX(16px);
+    }
+    50% {
+        transform: translateY(30px) translateX(-16px);
+    }
+    75%{
+        transform: translateY(35px) translateX(16px);
+    }
+}
+@keyframes moving-side{
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(16px);
+    }
+}
+@keyframes moving-side-left{
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-16px);
+    }
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.box1{
+    height: 290px;
+    width: 290px;
+    background-color: #ff0000;
+    bottom: 28%;
+    left: 40%;
+    z-index: 4;
+    animation: floating 8s ease-in-out infinite;
+    animation-fill-mode: both;
+    background-image: url('../resources/boxes-bg-img/peter_two.jpg');
+}
+.box2{
+    height: 170px;
+    width: 170px;
+    background-color: #ff6600;
+    top: 10%;
+    left: 70%;
+    z-index: 2;
+    animation: moving-side 6s ease-in-out infinite;
+    background-image: url('../resources/boxes-bg-img/boxImg.jpg');
+}
+.box3{
+    height: 120px;
+    width: 120px;
+    background-color: #ff9d00;
+    top: 5%;
+    left: 55%;
+    z-index: 1;
+    animation: moving-side-left 7s ease-in-out infinite;
+    background-image: url('../resources/boxes-bg-img/venomvenom.jpg');
+}
+.box4{
+    height: 70px;
+    width: 70px;
+    background-color: #ffc800;
+    top: 5%;
+    left: 30%;
+    animation: moving-fade 20s ease-in-out infinite;
+    background-image: url('../resources/boxes-bg-img/ironiron.jpg');
+}
+.box5{
+    height: 215px;
+    width: 215px;
+    background-color: #ff6600;
+    bottom: 10%;
+    left: 25%;
+    z-index: 3;
+    animation: moving-side-left 5s ease-in-out infinite;
+    background-image: url('../resources/boxes-bg-img/imgbox.jpg');
+}
+.box6{
+    height: 220px;
+    width: 220px;
+    background-color: #ffff00;
+    bottom: 15%;
+    right: 28%;
+    z-index: 1;
+    animation: moving-fade 20s ease-in-out infinite;
+    background-image: url('../resources/boxes-bg-img/marvelmarvel.webp');
+}
+.box7{
+    height: 120px;
+    width: 120px;
+    background-color: #ff9d00;
+    bottom: 5%;
+    left: 14%;
+    z-index: 2;
+    animation: moving-fade 20s ease-in-out infinite;
+    background-image: url('../resources/boxes-bg-img/imgimg.jpg');
+}
