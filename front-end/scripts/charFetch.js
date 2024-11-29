@@ -1,6 +1,13 @@
 const input_field = document.getElementById('search-input-js');
 const btn_clicker = document.getElementById('search-btn-js');
 const section = document.getElementById('search-result-sec');
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter'){
+        btn_clicker.click();
+    }
+});
+
 btn_clicker.addEventListener('click', async () => {
     if (input_field.value.trim().length < 1) {
         alert("Please enter a character name");
