@@ -5,7 +5,6 @@ let isSpread = false;
 cardSpread();
 
 function cardSpread(){
-
     card_conts.forEach((card_cont) =>{
         card_cont.addEventListener('click', () =>{
             const cards = card_cont.querySelectorAll('.card');

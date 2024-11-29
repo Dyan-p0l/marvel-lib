@@ -27,23 +27,26 @@
             </div>
             <div class="p-upper"><p>SEARCH FOR MARVEL CHARACTERS</p></div>
             <div class="input-cont">
-                <input type="text" placeholder="Search a character" >
-                <button class="search-btn">SEARCH</button>
+                <input type="text" placeholder="Search a character" id="search-input-js">
+                <button class="search-btn" id="search-btn-js">SEARCH</button>
             </div>
         </div>
     </section>
-    <section class="search-result-sec">
+    <!-- <section class="search-result-sec">
         <div class="image-result">
-
+            
         </div>
         <div class="description-cont">
             <h1 class="des-title">Wolverine</h1>
             <div class="des-parag-cont">
-                <p class="des-parag">A mutant with an unstoppable healing power, adamantium metal claws and no-nonsense attitude makes the man called Logan, one of the most ferocious heroes in the universe.</p>
+                <p>A mutant with an unstoppable healing power, adamantium metal claws and no-nonsense attitude makes the man called Logan, one of the most ferocious heroes in the universe.</p>
             </div>
         </div>
-    </section>
-    <section></section>
+    </section> -->
+    <section class="temp-sec" id="search-result-sec">
 
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script type="module" src="scripts/charFetch.js"></script>
 </body>
 </html>

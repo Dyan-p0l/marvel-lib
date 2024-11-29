@@ -18,6 +18,8 @@
 }
 html{
     width: 100%;
+    font-size: 62.5%;
+    
 }
 body{
     font-family: "Roboto", sans-serif;
@@ -29,16 +31,32 @@ section:not(#no-padding){
     padding-top: 3.5%;    
     height: 650px;
 }
-
+li a{
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+li a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 5px;
+    left: 0;
+    background-color: #fd0101;
+    transition: all 0.3s ease;
+}
+li a:hover::after{
+    width: 80%;
+}
+li a:hover{
+    color: #fd0101;
+}
 *{
     margin: 0;
     border: none;
     outline: none;
     box-sizing: border-box;
     padding: 0;
-}
-html{
-    font-size: 62.5%;
 }
 header{
     background-color: #141414;
@@ -335,6 +353,10 @@ footer i{
     color: #ffffff;
     background-color: #000000;
     border-radius: 50%;
+    cursor: pointer;
+}
+footer a{
+    text-decoration: none;
 }
 .footer-top{
     display: flex;

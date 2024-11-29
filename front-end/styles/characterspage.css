@@ -100,7 +100,7 @@ section:not(#no-padding){
     color: #ffffff;
     cursor: pointer;
 }
-.search-result-sec{
+.search-result-sec, .temp-sec{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
