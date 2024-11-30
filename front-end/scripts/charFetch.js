@@ -4,7 +4,7 @@ const section = document.getElementById('search-result-sec');
 
 const list_cont = document.querySelector('.list');
 
-const displayNames = (value) => {
+function displayNames(value) {
     input_field.value = value;
     list_cont.innerHTML = '';
 }
@@ -15,38 +15,88 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-input_field.addEventListener('keyup', async () => {
+// input_field.addEventListener('keyup', async () => {
 
+//     const input_val = input_field.value;
+
+//     list_cont.innerHTML = '';
+    
+//     if(input_val.length < 4){
+//         return false;
+//     }
+
+//     const url = `http://localhost:3000/api/characters?nameStartsWith=${input_val}`;
+
+//     const response = await fetch(url);
+//     const jsonData = await response.json();
+    
+//     console.log(jsonData);
+
+//     if(jsonData.data && jsonData.data.results.length > 0){
+//         jsonData.data.results.forEach((element) => {
+//             let val = element.name;
+//             let word = val.substr(0, input_field.value.length);
+//             word += val.substr(input_field.value.length);
+    
+//             list_cont.innerHTML += 
+//             `<div class="name-suggest" style="cursor: pointer;">
+//                 <p class="item">${word}</p>
+//             </div>`;
+
+//             const suggestDiv = document.querySelectorAll('.name-suggest');
+//             suggestDiv.forEach((namediv) => {
+//                 namediv.addEventListener('click', () => {
+//                     displayNames(val);
+//                 });
+//             });
+
+//         });
+//     }else{
+//         console.log('No results or invalid data structure');
+//     }
+// });
+
+input_field.addEventListener('keyup', async () => {
     const input_val = input_field.value;
 
     list_cont.innerHTML = '';
-    if(input_val.length < 4){
+    
+    if (input_val.length < 4) {
         return false;
     }
 
     const url = `http://localhost:3000/api/characters?nameStartsWith=${input_val}`;
 
-    const response = await fetch(url);
-    const jsonData = await response.json();
-    
-    console.log(jsonData);
+    try {
+        const response = await fetch(url);
+        const jsonData = await response.json();
+        
 
-    if(jsonData.data && jsonData.data.results.length > 0){
-        jsonData.data.results.forEach((element) => {
-            let val = element.name;
-            let word = `<b>${val.substr(0, input_field.value.length)}</b>`;
-            word += val.substr(input_field.value.length);
-    
-            list_cont.innerHTML += 
-            `<div class="name-suggest" style="cursor: pointer;" onclick="displayNames('${val}')">
-                <p class="item">${word}</p>
-            </div>`;
-    
-        });
-    }else{
-        console.log('No results or invalid data structure');
+        if (jsonData.data && jsonData.data.results.length > 0) {
+            jsonData.data.results.forEach((element) => {
+                let val = element.name;
+                let word = val.substr(0, input_field.value.length);
+                word += val.substr(input_field.value.length);
+
+                // Append the suggestion box
+                const suggestionHTML = document.createElement('div');
+                suggestionHTML.className = 'name-suggest';
+                suggestionHTML.style.cursor = 'pointer';
+                suggestionHTML.innerHTML = `<p class="item">${word}</p>`;
+                
+                // Add click event listener directly to the new element
+                suggestionHTML.addEventListener('click', () => {
+                    displayNames(val);
+                });
+
+                list_cont.appendChild(suggestionHTML);
+            });
+        } else {
+            console.log('No results or invalid data structure');
+        }
+    } catch (error) {
+        console.error('Error fetching data:', error);
     }
-    
 });
 
 btn_clicker.addEventListener('click', async () => {
