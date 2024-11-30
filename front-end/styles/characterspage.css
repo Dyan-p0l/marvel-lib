@@ -133,3 +133,10 @@ section:not(#no-padding){
     font-size: 2rem;
     text-align: justify;
 }
+
+.list{
+    position: absolute;
+    width: 600px;
+    
+    bottom: -100px;
+}
