@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css">
     <link rel="stylesheet" href="./styles/animOnScroll.css">
     <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/commonstyles.css">
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
         <ul>    
             <li><a style="color: #ff0000;" href="">HOME</a></li>
             <li><a href="characters.html">CHARACTERS</a></li>
-            <li><a href="comics.html">COMICS</a></li>
+            <li><a href="creators.html">CREATORS</a></li>
             <li><a href="">FAQS</a></li>
             <li><a href="">ABOUT</a></li>
         </ul>
@@ -31,7 +32,7 @@
             <div class="p-lowercase">
                 <p>Dive into the Captivating <br> Narratives of Marvel's Iconic Characters</p>
             </div>
-            <button class="btn">
+            <button class="btn" onclick="window.location.href='characters.html'">
                 CHARACTERS
             </button>
         </div>
@@ -114,20 +115,24 @@
                 <div class="card" id="card-js" style="--i:3;" data-text="Iron Man"><img src="./resources/hover-cards/tony.jpeg" alt=""></div>
             </div>
         </div>
+        <button><a href="characters.html">Explore more Characters</a></button>
     </section>
     <footer>
         <div class="footer-top">
             <div class="logo-marvel2">
                 <p class="logo-text2">MARVE<strong style="color: #ff0000;" class="logo-strong">LIBRARY</strong></p>
             </div>
-            <div class="logo-marvel2">
-                <p class="logo-text2">MARVE<strong style="color: #ff0000;" class="logo-strong">LIBRARY</strong></p>
+            <div class="credits-div">
+                <a href="https://developer.marvel.com/" target="_blank">
+                    <div class="pic-credits"></div>
+                    <p class="text-dev">MARVEL DEVELOPER PORTAL</p>
+                </a>
             </div>
             <div class="logo-marvel2">
                 <p class="logo-text2">MARVE<strong style="color: #ff0000;" class="logo-strong">LIBRARY</strong></p>
             </div>
         </div>
-        <div class="credentials-cont">
+        <div class="credentials-cont" onclick="window.location.href='https://developer.marvel.com/';">
             <div class="icon-cont">
                 <a href="https://github.com/Dyan-p0l" target="_blank"><i class="ri-github-fill"></i></a>
                 <a href="https://www.instagram.com/dyan_pol.01001/?hl=en" target="_blank"><i class="ri-instagram-line"></i></a>

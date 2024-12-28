@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHARACTERS</title>
-    <link rel="stylesheet" href="./styles/homepage.css">
+    <link rel="stylesheet" href="./styles/commonstyles.css">
     <link rel="stylesheet" href="./styles/characterspage.css">
 </head>
 <body>
@@ -13,11 +13,11 @@
             <p class="logo-text">MARVE<strong style="color: #ff0000;" class="logo-strong">LIBRARY</strong></p>
         </div>
         <ul>
-            <li><a href="index.html" target="blank">HOME</a></li>
-            <li><a style="color: #ff0000;" href="characters.html" target="blank">CHARACTERS</a></li>
-            <li><a href="comics.html" target="blank">COMICS</a></li>
-            <li><a href="" target="blank">FAQS</a></li>
-            <li><a href="" target="blank">ABOUT</a></li>
+            <li><a href="index.html">HOME</a></li>   
+            <li><a style="color: #ff0000;" href="characters.html">CHARACTERS</a></li>
+            <li><a href="creators.html">CREATORS</a></li>
+            <li><a href="">FAQS</a></li>
+            <li><a href="">ABOUT</a></li>
         </ul>
     </header>
     <section id="no-padding">
@@ -30,26 +30,46 @@
                 <input type="text" placeholder="Search a character" id="search-input-js">
                 <button class="search-btn" id="search-btn-js">SEARCH</button>
             </div>
-            <div class="list"></div>
-        </div>
-    </section>
-    <!-- <section class="search-result-sec">
-        <div class="image-result">
-            
-        </div>
-        <div class="description-cont">
-            <h1 class="des-title">Wolverine</h1>
-            <div class="des-parag-cont">
-                <p>A mutant with an unstoppable healing power, adamantium metal claws and no-nonsense attitude makes the man called Logan, one of the most ferocious heroes in the universe.</p>
+            <div class="list">
+                
             </div>
         </div>
-    </section> -->
-    <section class="temp-sec" id="search-result-sec">
-        
     </section>
-    <section id="char-comics-sec">
+    <section class="result-container">
+        <div class="temp-sec" id="search-result-sec">
+            
+        </div>
+    </section>
+    <section id="char-comics-sec" class="comics-sec">
 
     </section>
+    <footer>
+        <div class="footer-top">
+            <div class="logo-marvel2">
+                <p class="logo-text2">MARVE<strong style="color: #ff0000;" class="logo-strong">LIBRARY</strong></p>
+            </div>
+            <div class="credits-div">
+                <a href="https://developer.marvel.com/" target="_blank">
+                    <div class="pic-credits"></div>
+                    <p class="text-dev">MARVEL DEVELOPER PORTAL</p>
+                </a>
+            </div>
+            <div class="logo-marvel2">
+                <p class="logo-text2">MARVE<strong style="color: #ff0000;" class="logo-strong">LIBRARY</strong></p>
+            </div>
+        </div>
+        <div class="credentials-cont" onclick="window.location.href='https://developer.marvel.com/';">
+            <div class="icon-cont">
+                <a href="https://github.com/Dyan-p0l" target="_blank"><i class="ri-github-fill"></i></a>
+                <a href="https://www.instagram.com/dyan_pol.01001/?hl=en" target="_blank"><i class="ri-instagram-line"></i></a>
+                <a href="https://www.facebook.com/johnpaul.rayco.5" target="_blank"><i class="ri-facebook-fill"></i></a>
+                <a href=""><i class="ri-messenger-fill"></i></a>
+                <a href=""><i class="ri-discord-fill"></i></a>
+                <a href=""><i class="ri-tiktok-fill"></i></a>
+            </div>
+            <p style="font-size: 1.8rem; color: #ffffff;">&copy; 2024 Marvel Library. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
     <script type="module" src="scripts/charFetch.js"></script>
 </body>

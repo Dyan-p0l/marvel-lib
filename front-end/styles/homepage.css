@@ -16,99 +16,12 @@
     font-weight: bold;
     font-style: normal;
 }
-html{
-    width: 100%;
-    font-size: 62.5%;
-    
-}
-body{
-    font-family: "Roboto", sans-serif;
-}
 section:not(#no-padding){
     margin: none;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 3.5%;    
-    height: 650px;
-}
-li a{
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-li a::after{
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0;
-    bottom: 5px;
-    left: 0;
-    background-color: #fd0101;
-    transition: all 0.3s ease;
-}
-li a:hover::after{
-    width: 80%;
-}
-li a:hover{
-    color: #fd0101;
-}
-*{
-    margin: 0;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-    padding: 0;
-}
-header{
-    background-color: #141414;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    z-index: 10;
-    position: sticky;
-    top: -2.26%;
-}
-ul{
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 2.5rem;
-    cursor: pointer;
-}
-ul a{
-    text-decoration: none;
-    color:#ffffff;
-}
-.logo-marvel2{
-    height: 170px;
-    width: 190px;
-}
-.logo-text{
-    font-family: 'Marvel';
-    font-weight: 900;
-    font-size: 4.6rem;
-    color: #ffffff;
-    padding-top: 8px;
-}
-.logo-text2{
-    font-family: 'Marvel';
-    font-weight: 900;
-    font-size: 5.1rem;
-    color: #ffffff;
-    padding-top: 8px;
-}
-.logo-strong{
-    font-family: 'Marvel';
-}
-.logo-marvel{
-    height: 60px;
-    width: 190px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    cursor: pointer;
+    min-height: 650px;
 }
 .vid-bg{
     position: relative;
@@ -179,13 +92,7 @@ ul a{
     align-items: center;
     gap: 90px;
 }
-.section-heading{
-    margin: 0 0 0 0;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 4.3rem;
-    font-weight: 1000;
-    padding: 15px;
-}
+
 .content{
     width: 525px;
     display: flex;
@@ -252,7 +159,7 @@ ul a{
 .cards{
     display: flex;
     flex-direction: row;
-    height: 80%;
+    height: 74%;
     width: 100%;
     background-color: #000000;
     align-items: center;
@@ -285,6 +192,26 @@ ul a{
     transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px));
     z-index: 4;
 } */
+.card-section{
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 750px !important;
+}
+.card-section button{
+    background-color: #fd0101;
+    height: 60px;
+    width: 170px;
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+}
+.card-section button a{
+    text-decoration: none;
+    color: #ffffff;
+}
 .spread{
     transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px)) ;
     z-index: 4;
@@ -327,49 +254,8 @@ ul a{
     transition: transform 0.8s ease-in-out;
 }
 .instruction{
-    background-image: url('../resources/boxes-bg-img/peter_two.jpg');
+    background-image: url('../resources/intruc-ss.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-footer{
-    height: 300px;
-    background-color: #000000;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    justify-content: space-around;
-    align-items: center;
-}
-.credentials-cont{
-    height: auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-}
-footer i{
-    font-size: 3.6rem;
-    color: #ffffff;
-    background-color: #000000;
-    border-radius: 50%;
-    cursor: pointer;
-}
-footer a{
-    text-decoration: none;
-}
-.footer-top{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-}
-.footer-top div{
-    width: 15%;
-    display: flex;
-    align-items: center;
-}
-.icon-cont{
-    display: flex;
-    gap: 20px;
 }
