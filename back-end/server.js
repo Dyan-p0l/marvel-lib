@@ -56,7 +56,7 @@ app.get('/api/characters/:id/comics', async (req, res) => {
         const timeStamp = new Date().getTime();
         const hashVal = CryptoJS.MD5(timeStamp + privateKey + publicKey).toString();
 
-        const comicUrl = `https://gateway.marvel.com:443/v1/public/characters/${id}/comics?ts=${timeStamp}&apikey=${publicKey}&hash=${hashVal}`;
+        const comicUrl = `https://gateway.marvel.com:443/v1/public/characters/${id}/comics?ts=${timeStamp}&apikey=${publicKey}&hash=${hashVal}&limit=15`;
 
         const response = await fetch(comicUrl);
         const comicsData = await response.json();

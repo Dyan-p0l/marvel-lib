@@ -19,7 +19,6 @@
 html{
     width: 100%;
     font-size: 62.5%;
-    
 }
 body{
     font-family: "Roboto", sans-serif;
@@ -113,14 +112,13 @@ ul a{
     padding: 15px;
 }
 footer{
-    height: 300px;
+    height: 370px;
     background-color: #222222;
     display: flex;
     flex-direction: column;
     gap: 5rem;
     justify-content: space-around;
     align-items: center;
-    overflow-y: hidden;
 }
 .credentials-cont{
     height: auto;
@@ -130,7 +128,7 @@ footer{
     gap: 20px;
 }
 footer i{
-    font-size: 3.6rem;
+    font-size: 2.4rem;
     color: #ffffff;
     background-color: #222222;
     border-radius: 50%;

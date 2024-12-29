@@ -92,7 +92,6 @@ section:not(#no-padding){
     align-items: center;
     gap: 90px;
 }
-
 .content{
     width: 525px;
     display: flex;
@@ -104,7 +103,7 @@ section:not(#no-padding){
 }
 .content p{
     text-align: justify;
-    font-size: 2.46rem;
+    font-size: 2.1rem;
 }
 .boxes{
     height: 550px;
@@ -135,11 +134,13 @@ section:not(#no-padding){
     display: flex;
     width: 1200px;
     gap: 50px;
+    align-items: center;
+    justify-content: center;
 }
 .parag-cont{
-    width: 600px;
+    width: 500px;
     text-align: justify;
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,14 +148,17 @@ section:not(#no-padding){
     gap: 30px;
 }
 .instruction{
-    width: 700px;
-    height: 400px;
-    background-color: #000000;
+    width: 750px;
+    height: 370px;
     color:#ffffff;
     font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../resources/intruc-ss.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .cards{
     display: flex;
@@ -254,8 +258,5 @@ section:not(#no-padding){
     transition: transform 0.8s ease-in-out;
 }
 .instruction{
-    background-image: url('../resources/intruc-ss.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    
 }

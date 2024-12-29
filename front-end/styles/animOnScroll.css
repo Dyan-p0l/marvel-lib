@@ -21,7 +21,6 @@ section:not(#no-padding) *:not(.with-anim){
         scale: 1;
     }
 } 
-
 /* @keyframes appear {
     0% {
         opacity: 1;
