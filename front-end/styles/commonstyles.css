@@ -23,8 +23,12 @@ html{
 body{
     font-family: "Roboto", sans-serif;
     position: relative;
+    opacity: 0.9;
+    transition: opacity 0.5s ease-in-out;
 }
-
+body.fade-in {
+    opacity: 1;
+}
 li a{
     position: relative;
     padding-bottom: 0.5rem;
@@ -163,7 +167,7 @@ footer a{
 }
 .credits-div:hover{
     cursor: pointer;
-}   
+}
 .text-dev{
     font-family: "Bebas Neue", sans-serif;
     font-size: 2.7rem;

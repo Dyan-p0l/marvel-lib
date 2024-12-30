@@ -3,47 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHARACTERS</title>
+    <title>COMICS</title>
     <link rel="stylesheet" href="./styles/commonstyles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css">
-    <link rel="stylesheet" href="./styles/characterspage.css">
+    <link rel="stylesheet" href="./styles/comicspage.css">
 </head>
 <body>
     <header>
         <div class="logo-marvel">
             <p class="logo-text">MARVE<strong style="color: #ff0000;" class="logo-strong">LIBRARY</strong></p>
         </div>
-        <ul>
-            <li><a href="index.html">HOME</a></li>   
-            <li><a style="color: #ff0000;" href="characters.html">CHARACTERS</a></li>
-            <li><a href="comics.html">COMICS</a></li>
-            <li><a href="">FAQS</a></li>
-            <li><a href="">ABOUT</a></li>
+        <ul> 
+            <li><a href="index.html" target="blank">HOME</a></li>
+            <li><a href="characters.html" target="blank">CHARACTERS</a></li>
+            <li><a style="color: #ff0000;" href="comics.html" target="blank">COMICS</a></li>
+            <li><a href="" target="blank">FAQS</a></li>
+            <li><a href="" target="blank">ABOUT</a></li>
         </ul>
     </header>
-    <section id="no-padding">
-        <div class="char-img-bg">
-            <div class="character-img"> 
-                
-            </div>
-            <div class="p-upper"><p>SEARCH FOR MARVEL CHARACTERS</p></div>
-            <div class="input-cont">
-                <input type="text" placeholder="Search a character" id="search-input-js">
-                <button class="search-btn" id="search-btn-js">SEARCH</button>
-            </div>
-            <div class="list">
-                
-            </div>
-        </div>
-    </section>
-    <section class="result-container">
-        <div class="temp-sec" id="search-result-sec">
-            
-        </div>
-    </section>
-    <section id="char-comics-sec" class="comics-sec">
-
-    </section>
+    <div class="content">
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
     <footer>
         <div class="footer-top">
             <div class="logo-marvel2">
@@ -71,8 +52,7 @@
             <p style="font-size: 1.8rem; color: #ffffff;">&copy; 2024 Marvel Library. All rights reserved.</p>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
-    <script type="module" src="scripts/charFetch.js"></script>
+    <script src="./scripts/creatorFetch.js"></script>
     <script src="./scripts/onLoad.js"></script>
 </body>
 </html>
