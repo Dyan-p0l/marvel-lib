@@ -70,7 +70,7 @@ app.get('/api/characters/:id/comics', async (req, res) => {
     }
 });
 
-app.get('/api/creators', async (req, res) => {
+app.get('/api/comics', async (req, res) => {
     try {
 
         const publicKey = process.env.MARVEL_PUBLIC_KEY;
@@ -78,11 +78,11 @@ app.get('/api/creators', async (req, res) => {
         const timeStamp = new Date().getTime();
         const hashVal = CryptoJS.MD5(timeStamp + privateKey + publicKey).toString();
 
-        const creatorUrl = `https://gateway.marvel.com:443/v1/public/creators?ts=${timeStamp}&apikey=${publicKey}&hash=${hashVal}&limit=40`;
-        const creatorRes = await fetch(creatorUrl);
-        const creatorData = await creatorRes.json();
+        const comicUrl = `https://gateway.marvel.com:443/v1/public/comics?ts=${timeStamp}&apikey=${publicKey}&hash=${hashVal}&limit=40`;
+        const comicRes = await fetch(comicUrl);
+        const comicData = await comicRes.json();
         
-        res.json(creatorData);
+        res.json(comicData);
         
 
     }
