@@ -72,18 +72,25 @@ app.get('/api/characters/:id/comics', async (req, res) => {
 
 app.get('/api/comics', async (req, res) => {
     try {
-
+        const {title, titleStartsWith} = req.query;
         const publicKey = process.env.MARVEL_PUBLIC_KEY;
         const privateKey = process.env.MARVEL_PRIVATE_KEY;
         const timeStamp = new Date().getTime();
         const hashVal = CryptoJS.MD5(timeStamp + privateKey + publicKey).toString();
 
-        const comicUrl = `https://gateway.marvel.com:443/v1/public/comics?ts=${timeStamp}&apikey=${publicKey}&hash=${hashVal}&limit=40`;
+        let comicUrl;
+        if (title) {
+            comicUrl = `https://gateway.marvel.com:443/v1/public/comics?ts=${timeStamp}&apikey=${publicKey}&hash=${hashVal}&title=${title}&limit=15`;
+        }else if (titleStartsWith) {
+            comicUrl = `https://gateway.marvel.com:443/v1/public/comics?ts=${timeStamp}&apikey=${publicKey}&hash=${hashVal}&titleStartsWith=${titleStartsWith}`;
+        }else {
+            comicUrl = `https://gateway.marvel.com:443/v1/public/comics?ts=${timeStamp}&apikey=${publicKey}&hash=${hashVal}&limit=15&offset=90`;
+        }
+        
         const comicRes = await fetch(comicUrl);
-        const comicData = await comicRes.json();
+        const comicData = await comicRes.json();    
         
         res.json(comicData);
-        
 
     }
     catch (error) {
@@ -91,6 +98,7 @@ app.get('/api/comics', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);

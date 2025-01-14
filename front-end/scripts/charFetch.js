@@ -2,6 +2,7 @@ const input_field = document.getElementById('search-input-js');
 const btn_clicker = document.getElementById('search-btn-js');
 const section = document.getElementById('search-result-sec');
 const comicsCont = document.getElementById('char-comics-sec');
+const loader  = document.getElementById('loading-ring');
 
 const list_cont = document.querySelector('.list');
 list_cont.style.display = 'none';
@@ -68,6 +69,8 @@ btn_clicker.addEventListener('click', async () => {
         return;
     }
 
+    loader.style.display = 'block';
+    
     const name = input_field.value.trim();
     const url = `http://localhost:3000/api/characters?name=${name}`;
     try {
@@ -103,7 +106,7 @@ btn_clicker.addEventListener('click', async () => {
 
             const comicRes = await fetch(comicUrl);
             const comicData = await comicRes.json();
-            
+
             console.log(comicData);
 
             if (comicData.data && comicData.data.results.length > 0) {
@@ -128,15 +131,25 @@ btn_clicker.addEventListener('click', async () => {
 
                     const comTitle = document.createElement('h3');
                     comTitle.innerHTML = comEl.title;
+                    const comCredits = document.createElement('p');
+                    comCredits.innerHTML = comicData.attributionText;
+                    comCredits.className = 'credits';
+                    console.log(comicData.attributionText);
 
                     com.appendChild(comImg);
                     com.appendChild(comTitle);
+                    com.appendChild(comCredits);
+
 
                     comCont.appendChild(com);
 
+                    com.addEventListener('click', () => {
+                        window.open(comEl.urls[0].url, '_blank');
+                    });
+
                 });
                 comicsCont.appendChild(comCont);
-            }
+            }   
             else{
                 console.log('No comics found');
             }
@@ -147,10 +160,12 @@ btn_clicker.addEventListener('click', async () => {
         finally{
             console.log('data fetched');
         }
-
     } 
     catch (error) {
         console.error('Error fetching character data:', error);
+    }
+    finally{
+        loader.style.display = 'none';
     }
     
 });

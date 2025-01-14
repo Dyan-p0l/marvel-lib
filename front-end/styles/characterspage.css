@@ -182,6 +182,7 @@ section:not(#no-padding):not(#char-comics-sec){
     justify-content: center;
     align-items: center;
     height: 3000px;
+    position: relative;
 }
 .comics-container{
     display: grid;
@@ -190,16 +191,38 @@ section:not(#no-padding):not(#char-comics-sec){
     gap: 100px;
 }
 .comics{
+    position: relative;
     height: 500px;
     width: 340px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 .comics h3{
+    display: none;
     font-size: 2rem;
     text-align: center;
+    color: #ffffff;
     margin-top: 15px;
     z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.credits{
+    display: none;
+    color: #ffffff;
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: 10%;
+    left: 11%;
+    z-index: 2;
+}
+.comics:hover h3{
+    display: block;
+} 
+.comics:hover .credits{
+    display: block;
 }
 .com-image{
     width: 100%;
@@ -207,6 +230,23 @@ section:not(#no-padding):not(#char-comics-sec){
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+.comics::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 8, 8, 0.7); /* Example: semi-transparent overlay */
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 1; /* Ensure it is behind the text but above the image */
+}
+
+.comics:hover::before {
+    opacity: 1;
 }
 footer{
     margin-top: 75px;
