@@ -5,11 +5,7 @@ section:not(#no-padding) *:not(.with-anim){
     animation-fill-mode: forwards;
 }
 
-/* section:not(#no-padding) {
-    animation: appear, 5s, linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 48%;
-} */
+
 
 @keyframes appear{
     from{
@@ -21,23 +17,5 @@ section:not(#no-padding) *:not(.with-anim){
         scale: 1;
     }
 } 
-/* @keyframes appear {
-    0% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-        
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-        
-    }
-} */
+
 

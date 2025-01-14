@@ -44,8 +44,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             const comTitle = document.createElement('h3');
             comTitle.innerHTML = comEl.title;
 
+            const comCredits = document.createElement('p');
+            comCredits.innerHTML = comData.attributionText;
+            comCredits.className = 'credits';
+
             com.appendChild(comImg);
             com.appendChild(comTitle);
+            com.appendChild(comCredits);
 
             comCont.appendChild(com);
             com.addEventListener('click', () => {
@@ -53,13 +58,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
         });
-
         comic_section.appendChild(comCont);
     }
     catch (error) {
         console.log('No data found', error);
     }
-
 });
 
 search_btn.addEventListener('click', async () => {

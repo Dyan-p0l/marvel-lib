@@ -217,7 +217,7 @@ section:not(#no-padding){
     color: #ffffff;
 }
 .spread{
-    transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px)) ;
+    transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px));
     z-index: 4;
     transition: all 0.3s ease-in-out;
 }
